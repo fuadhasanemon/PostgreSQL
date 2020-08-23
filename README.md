@@ -1,2 +1,2 @@
 # PostgreSQL
-(PostgreSQL)[G:\Postgree\PostgreSQL\postgreSQL.jpeg]
+(PostgreSQL)[\Postgree\PostgreSQL\postgreSQL.jpeg]
