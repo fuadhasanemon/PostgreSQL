@@ -18,7 +18,8 @@ At first,download the PostgreSQL from [here](https://www.postgresql.org/) For do
 
 <P>After downloading, complete the setup of the downloaded .exe file just like any other programs. Provide a password for Superuser while doing the setup and remember this password must. Finish the setup. A SQL Shell(psql) and a graphical user interface pgAdmin4 will be installed for operating the database. In this demonstartion, using of SQL Shell(psql) will be in focus. Click the psql application to launch it. The psql command-line program will display. Enter all the necessary information such as the server, database, port, username, and password. To accept the default, press Enter. Provide the password that you entered during installing the PostgreSQL.</p>
 
-> Server [localhost]:
+
+```> Server [localhost]:
 > Database [postgres]:
 > Port [5432]:
 > Username [postgres]:
@@ -30,12 +31,4 @@ At first,download the PostgreSQL from [here](https://www.postgresql.org/) For do
 > Type "help" for help.
 
 > postgres=#
-
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
 ```
