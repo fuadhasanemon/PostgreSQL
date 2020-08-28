@@ -32,3 +32,9 @@ At first,download the PostgreSQL from [here](https://www.postgresql.org/) For do
 
 > postgres=#
 ```
+
+<h1>Adding PostgreSQL to Path variable</h1>
+
+To add PostgreSQL to the path we have to copy the path to PostGreSQL installation directory to the path variable.
+* First we have to copy the path to the bin folder in the installation directory.
+![Copy this folder url](C:\Users\User\OneDrive\Pictures\Screenshots\1.png)
