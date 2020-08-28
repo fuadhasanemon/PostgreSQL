@@ -30,3 +30,12 @@ At first,download the PostgreSQL from [here](https://www.postgresql.org/) For do
 > Type "help" for help.
 
 > postgres=#
+
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
