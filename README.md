@@ -124,62 +124,84 @@ Creating a table
 To create a table, our syntax is
 
 
-`code` CREATE TABLE $tableName (
+ CREATE TABLE 
+ 	`code`
+ 	$tableName (
 	$column_1 $data_type $optional_meta_information, 
 	$column_2 $data_type $optional_meta_infromation,
 	$column_N $data_type $optional_meta_information,
 	$table_constraints
-);
-Lets start simple, So our command will be
+	`code`
+	
+* Lets start simple, So our command will be
 
-CREATE TABLE colours (
+CREATE TABLE 
+```  colours (
 	id int PRIMARY KEY NOT NULL, 
 	name varchar(20) NOT NULL, 
 	hex varchar(7)
 );
-`code`
+```
+
+
 To know if it worked, we can check tables, by typeing \dt while we are in the database. List of all tables
 
-Inserting data
+# Inserting data
 As of now, we have our table and we can store some data in it. To store data, we use a insert query. The insert query is structured as follows
 
-INSERT INTO $table_name ($column_1, $column_2, ... $column_N) VALUES ($value_of_column_1, $value_of_column_2, ... $value_of_column_N);
-This will insert a single row. If we want to insert multiple rows at once, we can append to the values.
+``` INSERT INTO $table_name ($column_1, $column_2, ... $column_N) VALUES ($value_of_column_1, $value_of_column_2, ... $value_of_column_N);
+```
+* This will insert a single row. If we want to insert multiple rows at once, we can append to the values.
 
+``` 
 INSERT INTO $table_name ($column_1, $column_2, ... $column_N) VALUES ($row_1_column_1, $row_1_column_2, ... $row_1_column_N),($row_2_column_1, $row_2_column_2, ... $row_2_column_N),($row_N_column_1, $row_N_column_2, ... $row_N_column_N);
-Example
+```
+
+# Example
+
 So for creating a single row
 
+``` 
 INSERT INTO colours (id, name) VALUES (1, 'red');
-For inserting multiple rows
+```
+# For inserting multiple rows
 
+``` 
 INSERT INTO colours (id, name, hex) VALUES (2, 'green',''), (3, 'blue','3399ff');
+```
+
 The output should be INSERT 0 2 or similar.
 
 To see if everything worked correctly, we can list all our records from our table by using the SELECT command.
 
+```
 SELECT * FROM $table_name;
+```
+
 So our command will be,
 
 SELECT ALL FROM colours;
 The result should be a list data. Selecting all records from our colours table. Now, with the * , we have selected all the columns. To select a specific column, we can specificy them in place of asterisk.
 
+``` 
 SELECT column_a, column_b FROM $table_name;
+```
 So our example will be
 
 SELECT name, hex from colours;
 Returning specific columns
 
-Selecting record/s
-syntax
-
+```
 SELECT * FROM $table_name;
-# or, if you want to be specific with column names.
+```
+
+# For, if you want to be specific with column names.
+
+``` 
 SELECT $column_name_a, $column_name_b,... $column_name_n FROM $table_name;
-example
+```
 
-SELECT * FROM cars;
-result enter image description here
+# example
 
-Updating a record
-syntax
+``` SELECT * FROM cars;
+```
