@@ -40,30 +40,27 @@ To add PostgreSQL to the path we have to copy the path to PostGreSQL installatio
 
 ![Copy this folder url](\Users\User\OneDrive\Pictures\Screenshots\1.png)
 
-Starting postgresSQL
-To start/stop/control the server I'll be using pg_ctl.
+#Starting postgresSQL
+* To start/stop/control the server I'll be using pg_ctl.
 
-pg_ctl -D /usr/local/var/postgres start
-I'm using a mac, so the directory /usr/local/var/postgres might vary from your machine.
+#Using the CLI
+<p> psql is the PostgreSQL interactive terminal. To run the interactive shell, type </p>
 
-Using the CLI
-psql is the PostgreSQL interactive terminal. To run the interactive shell, type
+#psql postgres 
+<p> It will promt a new cli. The postgres is a default database that came with the installation. 
 
-psql postgres 
-It will promt a new cli. The postgres is a default database that came with the installation.
+To check if everything is alright, we can check the version by typing </p>
 
-To check if everything is alright, we can check the version by typing
+#select version();
+#and the output should be similar to
 
-select version();
-and the output should be similar to
-
-PostgreSQL 12.3 on x86_64-apple-darwin19.5.0, compiled by Apple clang version 11.0.3 (clang-1103.0.32.62), 64-bit
+<p> PostgreSQL 12.3 on x86_64-apple-darwin19.5.0, compiled by Apple clang version 11.0.3 (clang-1103.0.32.62), 64-bit
 (1 row)
 Creating a user
 syntax
 
 CREATE USER name [ [ WITH ] option [ ... ] ]
-options are
+options are </p>
 
     SYSID uid 
     | CREATEDB | NOCREATEDB
@@ -119,7 +116,8 @@ psql -h localhost -p 5432 -U username dbname
 Creating a table
 To create a table, our syntax is
 
-CREATE TABLE $tableName (
+
+`code` CREATE TABLE $tableName (
 	$column_1 $data_type $optional_meta_information, 
 	$column_2 $data_type $optional_meta_infromation,
 	$column_N $data_type $optional_meta_information,
@@ -132,6 +130,7 @@ CREATE TABLE colours (
 	name varchar(20) NOT NULL, 
 	hex varchar(7)
 );
+`code`
 To know if it worked, we can check tables, by typeing \dt while we are in the database. List of all tables
 
 Inserting data
