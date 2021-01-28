@@ -59,15 +59,17 @@ To check if everything is alright, we can check the version by typing </p>
 Creating a user
 syntax
 
-CREATE USER name [ [ WITH ] option [ ... ] ]
+# CREATE USER 
+name [ [ WITH ] option [ ... ] ]
 options are </p>
-
+```
     SYSID uid 
     | CREATEDB | NOCREATEDB
     | CREATEUSER | NOCREATEUSER
     | IN GROUP groupname [, ...]
     | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'password'
     | VALID UNTIL 'abstime'
+```   
 Lets create a user who can login and create database and interact with them.
 
 CREATE ROLE $username WITH LOGIN PASSWORD = 'password-goes-here';
@@ -79,20 +81,25 @@ create DATABASE $dbName;
 
 # example 
 create DATABASE test_db;
+```
 the output should be
+```
 
-CREATE DATABASE
+# CREATE DATABASE
 Creating a database with specific owner
 syntax
 
-CREATE DATABASE $DB_NAME WITH OWNER $username;
-example
+# CREATE DATABASE 
+```
+$DB_NAME WITH OWNER $username;
+```
+# example
 
-CREATE USER project_db WITH OWNER plaban;
+``` CREATE USER project_db WITH OWNER Fuad;
 Listing all databases
 To list all database in the interactive shell, type \l, it is not a SQL command so no need to use semi colons.
-
-Listing all databases
+```
+#  Listing all databases
 
 Switching databases
 To swithc to database, type \c $dbname to start using the database. For example \c test_db. The output should be similar to
