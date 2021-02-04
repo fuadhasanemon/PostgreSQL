@@ -205,3 +205,44 @@ SELECT $column_name_a, $column_name_b,... $column_name_n FROM $table_name;
 
 ``` SELECT * FROM cars;
 ```
+#Viewing the Same Table Differently
+To view all the data in the table at once, use :
+```
+SELECT * FROM students;
+```
+And if you want to view a specific column, use :
+```
+SELECT first_name FROM students;
+```
+
+#Selecting Multiple Table Data
+```
+SELECT * FROM students WHERE last_name IN ('Hossain', 'Akhter');
+
+SELECT * FROM students WHERE last_name IN ('Hossain', 'Akhter') OR department= 'Accounting';
+
+SELECT * FROM students WHERE last_name IN ('Hossain', 'Akhter') OR department= 'Accounting' ORDER BY last_name
+```
+#Helpful Commands
+These are some of the helpful commands which will get you started smoothly.
+
+To see which Role and Database are you using :
+```
+fuad=#\conninfo
+```
+To see the list of Database :
+```
+fuad=#\l
+```
+To see the list of Roles :
+```
+fuad=#\du
+```
+To change the Database you are using
+```
+fuad=#\c database_name
+```
+If you feel like sleeping :
+```
+fuad=#\q
+```
